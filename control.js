@@ -2,61 +2,39 @@ function keyTyped(){
 	
 	//LEWO
 	if (key === 'a'||key ==='A'){
-		avatar.left();
+		user.left();
 	}
 
 	//PRAWO
 	if (key ==='d'||key ==='D'){
-		avatar.right();
+		user.right();
 	}
 
 	//GORA
 	if (key ==='w'||key ==='W'){
-		avatar.up();
+		user.up();
 	}
 
 	//DOL
 	if (key ==='s'||key ==='S'){
-		avatar.down();
+		user.down();
 	}
-}
-function keyIsDown(){
-		//LEWO
-	if (key === 'a'||key ==='A'){
-		avatar.left();
-	}
-
-	//PRAWO
-	if (key ==='d'||key ==='D'){
-		avatar.right();
-	}
-
-	//GORA
-	if (key ==='w'||key ==='W'){
-		avatar.up();
-	}
-
-	//DOL
-	if (key ==='s'||key ==='S'){
-		avatar.down();
-	}
-}
 }
 function devicemoved(){
 	if(accelerationX - pAccelerationX < 0 ){
-		avatar.left();
+		user.left();
 	}
 
 	if(accelerationX - pAccelerationX > 0 ){
-		avatar.right();
+		user.right();
 	}
 
 	if(accelerationY - pAccelerationY < 0 ){
-		avatar.down();
+		user.down();
 	}
 
 	if(accelerationY - pAccelerationY > 0 ){
-		avatar.up();
+		user.up();
 	}
 
 }
