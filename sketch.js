@@ -12,7 +12,7 @@ translate(width/2,height/2);
 }
 
 function draw(){
-background(200);
+background(0);
 
 view();
 user.show();
