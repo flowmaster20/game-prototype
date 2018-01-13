@@ -11,6 +11,28 @@ function keyTyped(){
 	}
 
 	//GORA
+	if (key ==='w'||key ==='W'||key ==='p'){
+		user.up();
+	}
+
+	//DOL
+	if (key ==='s'||key ==='S'){
+		user.down();
+	}
+}
+function keyIsPressed(){
+
+	//LEWO
+	if (key === 'a'||key ==='A'){
+		user.left();
+	}
+
+	//PRAWO
+	if (key ==='d'||key ==='D'){
+		user.right();
+	}
+
+	//GORA
 	if (key ==='w'||key ==='W'){
 		user.up();
 	}
