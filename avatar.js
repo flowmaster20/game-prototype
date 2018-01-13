@@ -1,7 +1,7 @@
 var x = 0;
 var y = 0;
 function addphysics(a){
-    a += 10; //grawitacja
+    a += 20; //grawitacja
     return a;
 }
 /*
@@ -17,10 +17,10 @@ var n = 0;
 a = 0;
 
     if (x < 0){
-        n--;        
+        n--;
     }
     if (x > width){
-        n++;        
+        n++;
     }
     if(y>height){
         y=height;
@@ -35,8 +35,8 @@ return n;
 
 function avatar(a,b) {
 
-var offset = 40;
-var size = 10;
+var offset = 80;
+var size = 20;
 this.update = function(){
     x = x;
     y = addphysics(y);
