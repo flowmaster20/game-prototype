@@ -1,7 +1,8 @@
 var x = 0;
-var y = 0;
-function addphysics(a){
-    a += 1; //grawitacja
+var y= 0;
+
+function addphysics(var a){
+    a -= 5; //grawitacja
     return a;
 }
 /*
@@ -12,9 +13,9 @@ function level(){
 
 }
 */
-function view(a,b){
+function view(){
 var n = 0;
-a = 0;
+x = 0;
 if (n != 0){
     if (x < 0){
         n--;        
@@ -22,56 +23,51 @@ if (n != 0){
     if (x > width){
         n++;        
     }
-    if(y>height){
-        y=height;
+    if (y < 0){
+        y = 0;
     }
-    if(y<0){
-        y=0;
+    if (y > height){
+        y = height;
     }
-a = 0;
+avatar.x = 0;
 return n;
 }
-}
 
-function avatar(a,b) {
 
+function avatar() {
 var offset = 10;
 var size = 10;
-this.update = function(){
-    x = x;
-    y = addphysics(y);
-}
 this.right = function(){
     x += offset;
     if (x >= width){
-        view(x,y);
+        view();
     }
 }
 this.left = function(){
     x -= offset;
     if (x < 0){
-        view(x,y);
+        view();
     }
 }
-this.down = function(){
+this.up = function(){
     y += offset;
         if(y <0 -size){
         y = size;
     }
 }
-this.up = function(){
+this.down = function(){
     y -= offset;
     if(y >= height -size){
         y = size;
     }
 }
 this.show = function(){
+    view();
+    restrict();
     //level[view()].map()
-   y = addphysics(y);
-   //translate(width/2,height/2);
-    fill(255);
-    ellipse(x,y,size);
-   //d console.log(x);
-   // console.log(y);
+   y = addphysics(this.y);
+    noStroke();
+    fill(255,0,0);
+    rect(x,y,size);
 }
 }
