@@ -35,32 +35,33 @@ return n;
 
 function avatar(a,b) {
 
-var offset = 80;
+var offsetY = 80;
+var offsetX = 10;
 var size = 20;
 this.update = function(){
     x = x;
     y = addphysics(y);
 }
 this.right = function(){
-    x += offset;
+    x += offsetX;
     if (x >= width){
         view(x,y);
     }
 }
 this.left = function(){
-    x -= offset;
+    x -= offsetX;
     if (x < 0){
         view(x,y);
     }
 }
 this.down = function(){
-    y += offset;
+    y += offsetY;
         if(y <= 0){
         y = 0;
     }
 }
 this.up = function(){
-    y -= offset;
+    y -= offsetY;
     if(y >= height){
         y = size;
     }
