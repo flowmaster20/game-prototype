@@ -15,7 +15,6 @@ function level(){
 function view(a,b){
 var n = 0;
 a = 0;
-
     if (x < 0){
         n--;
     }
@@ -71,9 +70,11 @@ this.show = function(){
    y = addphysics(y);
    //translate(width/2,height/2);
    view();
-   noStroke();
-    fill(255);
-    ellipse(x,y,size);
+
+    fill(0);
+    translate(0,-32)
+  //  ellipse(x,y,size);
+  image(img, x, y);
    //d console.log(x);
    // console.log(y);
 }
