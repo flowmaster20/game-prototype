@@ -4,7 +4,7 @@ function preload() {
   img = loadImage('hero.jpg');
 }
 function setup(){
-createCanvas(windowWidth,400);
+createCanvas(windowWidth,windowHeight);
 frameRate(30);
 translate(width/2,height/2);
     fill(0);
