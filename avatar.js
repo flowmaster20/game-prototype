@@ -1,5 +1,6 @@
 
 function avatar(a,b) {
+this.oldposition = createVector(0,0);
 this.position = createVector(width/2,height/2);
 this.velocity = createVector(0,0);
 var offsetX = createVector(10,0);
@@ -14,10 +15,12 @@ this.restrict = function(sposition,rozmiar){
 
 if((this.position.x > sposition.x - size && this.position.x < (sposition.x + rozmiar)+size)&&(this.position.y > sposition.y -size &&this.position.y < (sposition.y +rozmiar)+size)){
     if(this.position.x > sposition.x-size && this.position.x < (sposition.x + rozmiar)+size){
-        this.position.x = sposition.x - size;
+        this.position = this.oldposition;
+        this.velocity.mult(-0.5);
         }
     if(this.position.y > sposition.y - size &&this.position.y < (sposition.y +rozmiar)+size){
-        this.position.y = sposition.y - size;
+        this.position = this.oldposition;
+        this.velocity.mult(-0.5);
         }
 }
 }
@@ -56,6 +59,7 @@ this.update = function(){
   this.velocity.limit(20);
   this.checkEdge();
   this.position.add(this.velocity);
+  this.oldposition.set(this.position);
 }
 this.show = function(){
 
