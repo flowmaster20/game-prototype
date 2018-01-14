@@ -1,9 +1,7 @@
 var x = 0;
-
 var y = 0;
 function addphysics(a){
     a += 20; //grawitacja
-
     return a;
 }
 /*
@@ -14,29 +12,27 @@ function level(){
 
 }
 */
-function view(){
+function view(a,b){
 var n = 0;
-
 a = 0;
-
     if (x < 0){
         n--;
     }
     if (x > width){
         n++;
     }
-    if (y < 0){
-        y = 0;
+    if(y>height){
+        y=height;
     }
-
     if(y<0){
         y=0;
 
 a = 0;
-
 return n;
 }
+}
 
+function avatar(a,b) {
 
 var offsetY = 80;
 var offsetX = 10;
@@ -45,20 +41,18 @@ this.update = function(){
     x = x;
     y = addphysics(y);
 }
-
 this.right = function(){
     x += offsetX;
     if (x >= width){
-        view();
+        view(x,y);
     }
 }
 this.left = function(){
     x -= offsetX;
     if (x < 0){
-        view();
+        view(x,y);
     }
 }
-
 this.down = function(){
     y += offsetY;
         if(y <= 0){
@@ -68,15 +62,11 @@ this.down = function(){
 this.up = function(){
     y -= offsetY;
     if(y >= height){
-
         y = size;
     }
 }
 this.show = function(){
-    view();
-    restrict();
     //level[view()].map()
-
    y = addphysics(y);
    //translate(width/2,height/2);
    view();
@@ -87,6 +77,5 @@ this.show = function(){
   image(img, x, y);
    //d console.log(x);
    // console.log(y);
-
 }
 }

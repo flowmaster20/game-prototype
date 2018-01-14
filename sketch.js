@@ -1,4 +1,3 @@
-
  var user;
  var img;
 function preload() {
@@ -24,4 +23,3 @@ user.show();
 console.log(width);
 console.log(height);
 }
-
