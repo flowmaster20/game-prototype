@@ -10,16 +10,16 @@ this.setup = function(){
   this.position.set(a,b);
 }
 
-this.restrict = function(x_,y_,rozmiar){
-//
-// if((this.x > x_ - size && this.x < (x_ + rozmiar)+size)&&(this.y > y_ -size &&this.y < (y_ +rozmiar)+size)){
-//     if(this.x > x_-size && this.x < (x_ + rozmiar)+size){
-//         this.x = x_ - size;
-//         }
-//     if(this.y > y_ - size &&this.y < (y_ +rozmiar)+size){
-//         this.y = y_ - size;
-//         }
-//}
+this.restrict = function(sposition,rozmiar){
+
+if((this.position.x > sposition.x - size && this.position.x < (sposition.x + rozmiar)+size)&&(this.position.y > sposition.y -size &&this.position.y < (sposition.y +rozmiar)+size)){
+    if(this.position.x > sposition.x-size && this.position.x < (sposition.x + rozmiar)+size){
+        this.position.x = sposition.x - size;
+        }
+    if(this.position.y > sposition.y - size &&this.position.y < (sposition.y +rozmiar)+size){
+        this.positionn.y = sposition.y - size;
+        }
+}
 }
 
 this.right = function(){
@@ -51,7 +51,7 @@ this.update = function(){
   var dir =new p5.Vector(this.position.x,height)
   this.gravity = p5.Vector.sub(this.position,dir);
   this.gravity.normalize();
-  this.gravity.mult(map(this.position.y,height,0,0,10));
+  this.gravity.mult(map(this.position.y,height,0,0,5));
   this.velocity.sub(this.gravity);
   this.velocity.limit(20);
   this.checkEdge();
