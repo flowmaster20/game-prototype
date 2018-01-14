@@ -17,7 +17,7 @@ if((this.position.x > sposition.x - size && this.position.x < (sposition.x + roz
         this.position.x = sposition.x - size;
         }
     if(this.position.y > sposition.y - size &&this.position.y < (sposition.y +rozmiar)+size){
-        this.positionn.y = sposition.y - size;
+        this.position.y = sposition.y - size;
         }
 }
 }

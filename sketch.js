@@ -18,10 +18,10 @@ function draw(){
   var millisecond = millis();
   text('Milliseconds \nrunning: \n' + millisecond, 5, 40);
 background(255);
-square(50,height-20,20);
 
+square(50,height-20,20);
 user.update();
 user.show();
-console.log(user.position.toString());
+
 
 }
