@@ -18,6 +18,8 @@ translate(width/2,height/2);
 function draw(){
 background(255);
 square(50,height-20,20);
+
+user.update();
 user.show();
 
 
