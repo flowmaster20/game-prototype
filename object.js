@@ -8,4 +8,5 @@ function restrict(a,b,rozmiar){
 		x = a - size;
 		y = b - size;
 	}
+
 }

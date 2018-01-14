@@ -1,27 +1,21 @@
 /*
 function map(){
 var rozmiar = 5;
-var tab[width / pow(rozmiar,2)] = {
+var tab[width / rozmiar][height /rozmiar] = {
 0,0,0,0,0,
 0,0,0,0,1,
 0,0,0,1,1,
 0,0,1,1,1,
 0,1,1,1,1
 };
-// ZASTANWOIC SIE NAD TABLICZA 2 WYMIAROWA I JEDNO WYMIAROWA 
-//				I NAD ANJLEPSZYM ZASTOSOWANIEM
 
-for (var i = 0;i < tab.size();i++){ // JAK SIE SPRAWDZALO DLUGOSC TABLICY
-	for (var k = o;k < tab.size();k++ ){
 
-		if (tab){
+for (var i = 0;i < tab.lenght;i++){ 
+	for (var k = 0;k < tab.lenght;k++ ){
 
-			n++;
+		if (tab[i][k] == 1){
+			square(i,k);
 		}
-		els
-
-		}
-
 	}
 }
 }
