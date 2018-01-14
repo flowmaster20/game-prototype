@@ -18,8 +18,8 @@ translate(width/2,height/2);
 function draw(){
 background(255);
 view();
+square(50,height-20,20);
 user.show();
 //ellipse(0,0,10);
-console.log(width);
-console.log(height);
+
 }

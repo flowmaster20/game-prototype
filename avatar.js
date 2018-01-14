@@ -55,13 +55,13 @@ this.left = function(){
 }
 this.down = function(){
     y += offsetY;
-        if(y <= 0){
+        if(y >= height){
         y = 0;
     }
 }
 this.up = function(){
     y -= offsetY;
-    if(y >= height){
+    if(y <= 0){
         y = size;
     }
 }
