@@ -32,8 +32,8 @@ return n;
 }
 
 function avatar(a,b) {
-  var x;
-  var y;
+ this.x;
+ this.y;
 var offsetY = 80;
 var offsetX = 10;
 var size = 20;
