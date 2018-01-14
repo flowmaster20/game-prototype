@@ -4,15 +4,15 @@ function preload() {
   img = loadImage('hero.jpg');
 }
 function setup(){
-createCanvas(256,256);
+
+createCanvas(400,400);
 frameRate(30);
 translate(width/2,height/2);
     fill(0);
     ellipse(0,0,10);
  image(img, 0, 0);
    user = new avatar(0,0);
-    user.x = 0;
-    user.y = 0;
+   user.setup();
 }
 
 function draw(){

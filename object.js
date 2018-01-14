@@ -5,11 +5,11 @@ function square(a,b,rozmiar){
 	restrict(a,b,rozmiar);
 }
 function restrict(a,b,rozmiar){
-	if (x > a && x < (a + rozmiar)){
-		x = a - size;
+	if (avatar.x > a && avatar.x < (a + rozmiar)){
+		avatar.x = a - size;
 	}
-	if (y > b && y < (b + rozmiar)){
-		y = b - size;
+	if (avatar.y > b && avatar.y < (b + rozmiar)){
+		avatar.y = b - size;
 	}
 	console.log(b);
 }
