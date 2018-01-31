@@ -12,14 +12,17 @@ this.setup = function(){
 }
 
 this.restrict = function(sposition,rozmiar){
+    console.log("krawedz x");
 if((this.position.x > sposition.x - size && this.position.x < (sposition.x + rozmiar)+size)&&(this.position.y > sposition.y -size &&this.position.y < (sposition.y +rozmiar)+size)){
     if(this.position.x > sposition.x-size && this.position.x < (sposition.x + rozmiar)+size){
         this.position = this.oldposition;
         this.velocity.mult(-0.5);
+        console.log("krawedz x");
         }
     if(this.position.y > sposition.y - size &&this.position.y < (sposition.y +rozmiar)+size){
         this.position = this.oldposition;
         this.velocity.mult(-0.5);
+
         }
 }
 }
@@ -59,7 +62,6 @@ this.update = function(){
   this.checkEdge();
   this.position.add(this.velocity);
   this.oldposition.set(this.position);
-  this.restrict();
 }
 this.show = function(){
 

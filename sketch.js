@@ -27,6 +27,7 @@ background(255);
 
 for (var i = 0;i< 10;i++){
   SQUARES[i].show();
+  SQUARES[i].cancel();
 
 }
 
