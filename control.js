@@ -1,83 +1,85 @@
 // UP_ARROW, DOWN_ARROW, LEFT_ARROW, RIGHT_ARROW.
 
-function keyTyped(){
+function keyTyped() {
 
-	//LEWO
-	if (key === 'a'||key ==='A'){
-		user.left();
-	}
+  //LEWO
+  if (key === 'a' || key === 'A') {
+    user.left();
+  }
 
-	//PRAWO
-	if (key ==='d'||key ==='D'){
-		user.right();
-	}
+  //PRAWO
+  if (key === 'd' || key === 'D') {
+    user.right();
+  }
 
-	//GORA
-	if (key ==='w'||key ==='W'||key ==='p'){
-		user.up();
-	}
+  //GORA
+  if (key === 'w' || key === 'W' || key === 'p') {
+    user.up();
+  }
 
-	//DOL
-	if (key ==='s'||key ==='S'){
-		user.down();
-	}
-	//LEWO
-	if (keyCode === LEFT_ARROW){
-		user.left();
-	}
+  //DOL
+  if (key === 's' || key === 'S') {
+    user.down();
+  }
+  //LEWO
+  if (keyCode === LEFT_ARROW) {
+    user.left();
+  }
 
-	//PRAWO
-	if (keyCode === RIGHT_ARROW){
-		user.right();
-	}
+  //PRAWO
+  if (keyCode === RIGHT_ARROW) {
+    user.right();
+  }
 
-	//GORA
-	if (keyCode === UP_ARROW){
-		user.up();
-	}
+  //GORA
+  if (keyCode === UP_ARROW) {
+    user.up();
+  }
 
-	//DOL
-	if (keyCode === DOWN_ARROW){
-		user.down();
-	}
+  //DOL
+  if (keyCode === DOWN_ARROW) {
+    user.down();
+  }
 }
-function keyIsPressed(){
 
-	//LEWO
-	if (key === 'a'||key ==='A'){
-		user.left();
-	}
+function keyIsPressed() {
 
-	//PRAWO
-	if (key ==='d'||key ==='D'){
-		user.right();
-	}
+  //LEWO
+  if (key === 'a' || key === 'A') {
+    user.left();
+  }
 
-	//GORA
-	if (key ==='w'||key ==='W'){
-		user.up();
-	}
+  //PRAWO
+  if (key === 'd' || key === 'D') {
+    user.right();
+  }
 
-	//DOL
-	if (key ==='s'||key ==='S'){
-		user.down();
-	}
+  //GORA
+  if (key === 'w' || key === 'W') {
+    user.up();
+  }
+
+  //DOL
+  if (key === 's' || key === 'S') {
+    user.down();
+  }
 }
-function devicemoved(){
-	if(accelerationX - pAccelerationX < 0 ){
-		user.left();
-	}
 
-	if(accelerationX - pAccelerationX > 0 ){
-		user.right();
-	}
+function devicemoved() {
+  if (accelerationX - pAccelerationX < 0) {
+    user.left();
+  }
 
-	if(accelerationY - pAccelerationY < 0 ){
-		user.down();
-	}
+  if (accelerationX - pAccelerationX > 0) {
+    user.right();
+  }
 
-	if(accelerationY - pAccelerationY > 0 ){
-		user.up();
-	}
+  if (accelerationY - pAccelerationY < 0) {
+    user.down();
+  }
+
+  if (accelerationY - pAccelerationY > 0) {
+    user.up();
+  }
 
 }
